@@ -14,6 +14,7 @@ A home grown feature flag service.
 Flaggy has a simple API to manage feature flags: 
 
 ### Flags 
+```
 flaggy.create_flag(str name) -> bool : 
 
 flaggy.set_flag(bool flag) -> bool : 
@@ -21,8 +22,10 @@ flaggy.set_flag(bool flag) -> bool :
 flaggy.get_flag(str name) -> bool : 
 
 flaggy.delete_flag(str name) -> bool : 
+```
 
 ### Rules 
+```
 flaggy.create_rule(
     str name, 
     str flag_name, 
@@ -44,9 +47,10 @@ flaggy.delete_rule(
     str name, 
     str flag_name, 
 ) -> bool : 
-
+```
 
 ## Flaggy Client
+```
 flaggy.init(str host, str secret_key) -> flaggy_client : 
     # Connect to a flaggy server at @host with @secret_key for auth. 
     # Returns a flaggy client instance for this session. 
@@ -54,3 +58,4 @@ flaggy.init(str host, str secret_key) -> flaggy_client :
     # TODO: Will eventually create a websocket connection for broadcasts. 
 
 flaggy.FlaggyClient : 
+```
